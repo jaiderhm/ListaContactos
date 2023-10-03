@@ -3,6 +3,8 @@ let listaDeContactos = ["raulGonzales", "jhonJimenez", "joseHernandez", "mariaRa
 let contactoNuevo;
 contactoNuevo = "JaiderHerrera"
 
+console.log(listaDeContactos);
+
 //Funcion para agregar nuevo contacto
 function nuevoContacto() {
     listaDeContactos.unshift(contactoNuevo);
