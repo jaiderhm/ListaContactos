@@ -1,3 +1,4 @@
+//Lista de contactos creada
 let listaDeContactos = ["raulGonzales", "jhonJimenez", "joseHernandez", "mariaRamirez"];
 let contactoNuevo;
 contactoNuevo = "JaiderHerrera"
