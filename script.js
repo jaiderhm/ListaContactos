@@ -3,11 +3,27 @@ let listaDeContactos = ["raulGonzales", "jhonJimenez", "joseHernandez", "mariaRa
 let contactoNuevo;
 contactoNuevo = "JaiderHerrera"
 
+const objeto = {
+
+    id : "316516",
+    nombres : "Jaider",
+    apellidos : "Herrera",
+    telefonos : "30262635651",
+    ubicaciones : {
+        cuidad : "Cartagena",
+        direccion : "Olaya Herrera"
+    }
+}
+
 console.log(listaDeContactos);
 
 //Funcion para agregar nuevo contacto
 function nuevoContacto() {
-    listaDeContactos.unshift(contactoNuevo);
+    let objetoRecorrido;
+    for (objetoRecorrido in objeto) {
+        listaDeContactos.unshift(objetoRecorrido);    
+    }
+    
 
     return listaDeContactos;
 }
@@ -18,7 +34,10 @@ console.log(listaDeContactos);
 let nuevaLista;
 //Funcion para borrar un contacto en la lista
 function borrarContacto(){
-    nuevaLista = listaDeContactos.pop();
+    let objetoRecorrido;
+    for (objetoRecorrido in listaDeContactos) {
+        nuevaLista = listaDeContactos.pop(objetoRecorrido);    
+    }
 
     return listaDeContactos;
 }
@@ -31,4 +50,4 @@ function listaActualizada(){
     console.log(listaDeContactos);
 }
 
-listaActualizada();
+listaActualizada(objeto);
