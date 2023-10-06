@@ -5,10 +5,10 @@ contactoNuevo = "JaiderHerrera"
 
 const objeto = {
 
-    id : "316516",
+    id : 316516,
     nombres : "Jaider",
     apellidos : "Herrera",
-    telefonos : "30262635651",
+    telefonos : 3026263565,
     ubicaciones : {
         cuidad : "Cartagena",
         direccion : "Olaya Herrera"
@@ -18,11 +18,10 @@ const objeto = {
 console.log(listaDeContactos);
 
 //Funcion para agregar nuevo contacto
-function nuevoContacto() {
-    let objetoRecorrido;
-    for (objetoRecorrido in objeto) {
-        listaDeContactos.unshift(objetoRecorrido);    
-    }
+function nuevoContacto(nombres, telefonos) {
+    nombres = objeto.nombres;
+    telefonos = objeto.telefonos;
+        listaDeContactos.unshift(nombres, telefonos);    
     
 
     return listaDeContactos;
@@ -36,7 +35,7 @@ let nuevaLista;
 function borrarContacto(){
     let objetoRecorrido;
     for (objetoRecorrido in listaDeContactos) {
-        nuevaLista = listaDeContactos.pop(objetoRecorrido);    
+        nuevaLista = listaDeContactos.splice(3, 3, objetoRecorrido);    
     }
 
     return listaDeContactos;
