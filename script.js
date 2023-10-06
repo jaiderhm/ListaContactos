@@ -19,8 +19,9 @@ console.log(listaDeContactos);
 
 //Funcion para agregar nuevo contacto
 function nuevoContacto(nombres, telefonos) {
-    let nuevoTelefono = objeto.nombres;
-        listaDeContactos.unshift(nuevoTelefono);    
+    nombres = objeto.nombres;
+    telefonos = objeto.telefonos;
+        listaDeContactos.unshift(nombres, telefonos);    
     
 
     return listaDeContactos;
@@ -34,7 +35,7 @@ let nuevaLista;
 function borrarContacto(){
     let objetoRecorrido;
     for (objetoRecorrido in listaDeContactos) {
-        nuevaLista = listaDeContactos.splice(0, 3, objetoRecorrido);    
+        nuevaLista = listaDeContactos.splice(3, 3, objetoRecorrido);    
     }
 
     return listaDeContactos;
